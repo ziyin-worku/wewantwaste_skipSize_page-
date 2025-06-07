@@ -1,19 +1,12 @@
-# wewantwaste_skipSize_page-
-Key Design Improvements
-Modern Card Layout: Replaced the original table with visually appealing cards for each skip size
+# React + Vite
 
-Vibrant Color Scheme: Used a fresh green and orange palette to convey environmental friendliness
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Enhanced Visual Hierarchy: Improved typography and spacing for better content scanning
+Currently, two official plugins are available:
 
-Interactive Elements: Added hover effects and animations for better user engagement
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Responsive Design: Fully mobile-friendly layout that adapts to all screen sizes
+## Expanding the ESLint configuration
 
-Streamlined Booking Form: Simplified the booking process with a clean, organized form
-
-Value Proposition Section: Added "Why Choose Us" to highlight company benefits
-
-Modern Footer: Comprehensive footer with contact information and navigation
-
-All original functionality has been preserved including skip size selection, pricing display, and the booking form. The design now has a more contemporary, professional appearance while maintaining excellent usability.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
