@@ -4,10 +4,12 @@ import image from "../../assets/Images/skip.png"; // Placeholder image, replace 
 
 const SkipSizeCard = ({ skip, selected, onSelect, formatPrice }) => {
   return (
+    
     <div
       className={`${styles.card} 
       ${selected ? styles.selected : ""}`}
-      onClick={onSelect}
+      // onClick={onSelect}
+
     >
       <div className={styles.header}>
         <h3>

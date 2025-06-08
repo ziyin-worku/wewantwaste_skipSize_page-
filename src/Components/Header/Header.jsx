@@ -13,7 +13,7 @@ const Header = () => {
         <div className={styles.logo}>
           <FaRecycle className={styles.icon} />
           <h1>
-            Waste<span>Solutions</span>
+          WeWant <span>Waste</span>
           </h1>
         </div>
 
