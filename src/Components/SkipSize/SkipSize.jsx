@@ -9,25 +9,27 @@ const SkipSize = () => {
   const [loading, setLoading] = useState(true);
   const [selectedSkip, setSelectedSkip] = useState(null);
 
-  useEffect(() => {
-    const postcode = "NR32";
-    const area = "Lowestoft";
 
-    const url = endpoints.getSkipsByLocation(postcode, area);
 
-    axios
-      .get(url)
-      .then((response) => {
+useEffect(() => {
+  const postcode = "NR32";
+  const area = "Lowestoft";
+
+  const url = endpoints.getSkipsByLocation(postcode, area);
+
+  axios
+    .get(url)
+    .then((response) => {
         // console.log(response.data); // Log the response data for debugging
-        setSkips(response.data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Axios error:", err);
-        setError(err.message);
-        setLoading(false);
-      });
-  }, []);
+      setSkips(response.data);
+      setLoading(false);
+    })
+    .catch((err) => {
+      console.error("Axios error:", err);
+      setError(err.message);
+      setLoading(false);
+    });
+}, []);
 
   const handleSelect = (skip) => {
     setSelectedSkip(skip);
@@ -55,7 +57,10 @@ const SkipSize = () => {
               skip={skip}
               selected={selectedSkip?.id === skip.id}
               onSelect={() => handleSelect(skip)}
+
               formatPrice={formatPrice}
+              showBookNow={selectedSkip?.id === skip.id && skip.allowed_on_road && skip.allows_heavy_waste}
+
             />
           ))}
         </div>
