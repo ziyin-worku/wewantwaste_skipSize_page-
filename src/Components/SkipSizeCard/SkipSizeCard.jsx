@@ -4,7 +4,7 @@ import styles from "./SkipSizeCard.module.css";
 import image from "../../assets/Images/skip.png";
 
 import BookingDialog from '../BookingSkip/BookingSkip';
-// import Restriction from '../RestrictionCard/RestrictionCard';
+import Restriction from '../RestrictionCard/RestrictionCard';
 
 const SkipSizeCard = ({ skip, selected, onSelect, formatPrice, showBookNow  }) => {
   const [showDialog, setShowDialog] = useState(false);
