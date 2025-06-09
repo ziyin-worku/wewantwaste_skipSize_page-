@@ -3,7 +3,6 @@ import styles from "./Header.module.css";
 import { FaRecycle, FaPhoneAlt, FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -13,10 +12,12 @@ const Header = () => {
     <header className={styles.header}>
       <div className={`${styles.container} ${styles.headerContainer}`}>
         <div className={styles.logo}>
-          <FaRecycle className={styles.icon} />
-          <h1>
-            WeWant <span>Waste</span>
-          </h1>
+          <Link to="/">
+            <FaRecycle className={styles.icon} />
+            <h1>
+              WeWant <span>Waste</span>
+            </h1>
+          </Link>
         </div>
 
         {/* Hamburger icon */}
@@ -39,9 +40,7 @@ const Header = () => {
             </li>
             <li>
               <Link to="/contact" className={styles.ctaButton}>
-                
-                  <FaPhoneAlt /> Contact Us
-               
+                <FaPhoneAlt /> Contact Us
               </Link>
             </li>
           </ul>

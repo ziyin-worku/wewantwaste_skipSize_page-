@@ -25,18 +25,25 @@
     align-items: center;
     gap: 12px;
   }
+  .logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+  }
   
   .icon {
     font-size: 28px;
     color: var(--secondary);
   }
   
-  .logo h1 {
+  .logo a h1 {
     font-size: 20px;
     font-weight: 700;
   }
   
-  .logo h1 span {
+  .logo a h1 span {
     color: var(--secondary);
   }
   
