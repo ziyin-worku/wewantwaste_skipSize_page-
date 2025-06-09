@@ -13,7 +13,7 @@ const Header = () => {
         <div className={styles.logo}>
           <FaRecycle className={styles.icon} />
           <h1>
-          WeWant <span>Waste</span>
+            WeWant <span>Waste</span>
           </h1>
         </div>
 
@@ -25,28 +25,25 @@ const Header = () => {
         <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="#" className={styles.active}>
-                Skip Sizes
+              <a href="/skipsize">Skip Sizes</a>
+            </li>
+            {/* <li><a href="/">Services</a></li> */}
+
+            <li>
+              <a href="/aboutus">About Us</a>
+            </li>
+            <li>
+              <a href="/contact" className={styles.ctaButton}>
+                
+                  <FaPhoneAlt /> Contact Us
+               
               </a>
-            </li>
-            <li>
-              <a href="#">Services</a>
-            </li>
-            <li>
-              <a href="#">Pricing</a>
-            </li>
-            <li>
-              <a href="#">About Us</a>
             </li>
           </ul>
         </nav>
-
-        <button className={styles.ctaButton}>
-          <FaPhoneAlt /> Contact Us
-        </button>
       </div>
     </header>
   );

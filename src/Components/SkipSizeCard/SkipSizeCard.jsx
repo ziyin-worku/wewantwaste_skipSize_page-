@@ -1,12 +1,17 @@
-
 import React, { useState } from "react";
 import styles from "./SkipSizeCard.module.css";
 import image from "../../assets/Images/skip.png";
 
-import BookingDialog from '../BookingSkip/BookingSkip';
-import Restriction from '../RestrictionCard/RestrictionCard';
+import BookingDialog from "../BookingSkip/BookingSkip";
+import Restriction from "../RestrictionCard/RestrictionCard";
 
-const SkipSizeCard = ({ skip, selected, onSelect, formatPrice, showBookNow  }) => {
+const SkipSizeCard = ({
+  skip,
+  selected,
+  onSelect,
+  formatPrice,
+  showBookNow,
+}) => {
   const [showDialog, setShowDialog] = useState(false);
   const [bookingCompleted, setBookingCompleted] = useState(false);
 
@@ -24,13 +29,14 @@ const SkipSizeCard = ({ skip, selected, onSelect, formatPrice, showBookNow  }) =
     // If allowed, call onSelect and show BookingDialog
     onSelect();
     setShowDialog(true);
-
-  
   };
 
   const handleBookingSubmit = () => {
-    setBookingCompleted(true);      // hide "Book Now" after submit
-    setShowDialog(false);          // close dialog
+
+    setBookingCompleted(true); // hide "Book Now" after submit
+    setShowDialog(false); // close dialog
+
+    setSelected(true); // If you have a state for selected, update it
   };
 
   const handleCloseDialog = () => {
@@ -46,7 +52,11 @@ const SkipSizeCard = ({ skip, selected, onSelect, formatPrice, showBookNow  }) =
       </div>
 
       <div className={styles.image}>
-        <img src={image} alt={`${skip.size} Yard Skip`} className={styles.skipImage} />
+        <img
+          src={image}
+          alt={`${skip.size} Yard Skip`}
+          className={styles.skipImage}
+        />
       </div>
 
       <div className={styles.details}>
@@ -72,36 +82,32 @@ const SkipSizeCard = ({ skip, selected, onSelect, formatPrice, showBookNow  }) =
       <div className={styles.actions}>
         {!bookingCompleted && (
           <button
-            className={`${styles.btn} ${styles.btnPrimary} ${selected ? styles.selected : ""}`}
+            className={`${styles.btn} ${styles.btnPrimary} ${
+              selected ? styles.selected : ""
+            }`}
             onClick={handleSelectClick}
           >
             {selected && isAllowed ? "Selected" : "Select"}
           </button>
         )}
 
-        <button className={`${styles.btn} ${styles.btnOutline}`}>
-          Details
-        </button>
+    
       </div>
 
       {/* Render BookingDialog or Restriction */}
-      
 
-  {showDialog && (
-  isAllowed ? (
-    showBookNow && (
-      <BookingDialog
-        skipOptions={[skip]}
-        onClose={handleCloseDialog}
-        onSubmitted={handleBookingSubmit}
-      />
-    )
-  ) : (
-    <Restriction open={showDialog} onClose={handleCloseDialog} />
-  )
-)}
-
-
+      {showDialog &&
+        (isAllowed ? (
+          showBookNow && (
+            <BookingDialog
+              skipOptions={[skip]}
+              onClose={handleCloseDialog}
+              onSubmitted={handleBookingSubmit}
+            />
+          )
+        ) : (
+          <Restriction open={showDialog} onClose={handleCloseDialog} />
+        ))}
     </div>
   );
 };

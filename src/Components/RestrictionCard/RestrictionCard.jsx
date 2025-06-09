@@ -1,6 +1,5 @@
 
 
-
 import React, { useRef, useEffect } from "react";
 import styles from "./RestrictionCard.module.css";
 

@@ -1,21 +1,18 @@
-import React from 'react'
-import SkipSize from '../Components/SkipSize/SkipSize'
-import Header from '../Components/Header/Header'
-import Hero from '../Components/Hero/Hero'
-import Footer from '../Components/Footer/Footer'
-import WhyChooseUs from '../Components/WhyChooseUs/WhyChooseUs'
+import React from "react";
+import SkipSize from "../Components/SkipSize/SkipSize";
+import Hero from "../Components/Hero/Hero";
+import WhyChooseUs from "../Components/WhyChooseUs/WhyChooseUs";
+import ContactUs from "../Components/Contact/Contact";
 
 function Home() {
   return (
     <>
-    <Header/>
-    <Hero/>
-    <SkipSize/>
-    <WhyChooseUs/>
-    <Footer/>
-    
+      <Hero />
+      <SkipSize />
+      <WhyChooseUs />
+      <ContactUs />
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;
