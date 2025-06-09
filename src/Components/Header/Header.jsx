@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "./Header.module.css";
 import { FaRecycle, FaPhoneAlt, FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,22 +27,22 @@ const Header = () => {
         <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="/skipsize">Skip Sizes</a>
+              <Link to="/skipsize">Skip Sizes</Link>
             </li>
-            {/* <li><a href="/">Services</a></li> */}
+            {/* <li><Link to="/">Services</Link></li> */}
 
             <li>
-              <a href="/aboutus">About Us</a>
+              <Link to="/aboutus">About Us</Link>
             </li>
             <li>
-              <a href="/contact" className={styles.ctaButton}>
+              <Link to="/contact" className={styles.ctaButton}>
                 
                   <FaPhoneAlt /> Contact Us
                
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

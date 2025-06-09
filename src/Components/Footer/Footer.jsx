@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Footer.module.css';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
+import { Link } from "react-router-dom";
+
 
 const Footer = () => {
   return (
@@ -11,33 +13,33 @@ const Footer = () => {
             <h3>We Want Waste</h3>
             <p>Providing reliable and environmentally responsible waste management solutions since 2008.</p>
             <div className={styles.socialLinks}>
-              <a href="#"><FaFacebookF /></a>
-              <a href="#"><FaTwitter /></a>
-              <a href="#"><FaInstagram /></a>
-              <a href="#"><FaLinkedinIn /></a>
+              <Link to="#"><FaFacebookF /></Link>
+              <Link to="#"><FaTwitter /></Link>
+              <Link to="#"><FaInstagram /></Link>
+              <Link to="#"><FaLinkedinIn /></Link>
             </div>
           </div>
 
           <div className={styles.footerColumn}>
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Skip Sizes</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">About Us</a></li>
+              <li><Link to="#">Home</Link></li>
+              <li><Link to="#">Skip Sizes</Link></li>
+              <li><Link to="#">Services</Link></li>
+              <li><Link to="#">Pricing</Link></li>
+              <li><Link to="#">About Us</Link></li>
             </ul>
           </div>
 
           <div className={styles.footerColumn}>
             <h3>Our Services</h3>
             <ul>
-              <li><a href="#">Domestic Skip Hire</a></li>
-              <li><a href="#">Commercial Waste Management</a></li>
-              <li><a href="#">Wait & Load Service</a></li>
-              <li><a href="#">Waste Recycling</a></li>
-              <li><a href="#">Construction waste</a></li>
-              <li><a href="#">Demolition waste</a></li>
+              <li><Link to="#">Domestic Skip Hire</Link></li>
+              <li><Link to="#">Commercial Waste Management</Link></li>
+              <li><Link to="#">Wait & Load Service</Link></li>
+              <li><Link to="#">Waste Recycling</Link></li>
+              <li><Link to="#">Construction waste</Link></li>
+              <li><Link to="#">Demolition waste</Link></li>
             </ul>
           </div>
 
