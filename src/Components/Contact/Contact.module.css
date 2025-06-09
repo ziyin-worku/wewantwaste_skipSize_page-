@@ -52,13 +52,13 @@
 
 .mapContainer {
   flex: 1;
-  /* min-width: 300px; */
-  min-width: 18.75rem;
   
-  height: 300px;
+  height: 18rem;
+
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--box-shadow);
+  padding-inline:2rem;
 }
 
 .heading {
