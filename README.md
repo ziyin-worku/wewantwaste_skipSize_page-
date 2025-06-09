@@ -55,7 +55,7 @@ This is a modern and fully responsive React-based web page for selecting and boo
 
 ## 🔗 Live Demo
 
-> _Coming Soon_  
+>   
 https://skipsizepage.ziyintech.com/
 ---
 
